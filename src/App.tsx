@@ -10,6 +10,9 @@ export const App = () => {
         <h2>
           Coming soon...
         </h2>
+        <h3>
+          ...
+        </h3>
       </header>
     </div>
   );
