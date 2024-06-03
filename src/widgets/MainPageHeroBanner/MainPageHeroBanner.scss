@@ -1,0 +1,38 @@
+.bannerInfoContainer {
+  position: absolute;
+  inset: 0;
+  background-color: #00000000;
+  color: white;
+  font-size: 40px;
+  transition: background-color .4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding: 40px;
+  text-align: center;
+}
+
+.bannerInfo {
+  opacity: 0;
+  transition: opacity .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 50px;;
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.bannerInfoContainer:hover {
+  background-color: #00000040;aaqqaqw qaqaq2q21w2qq
+
+  .bannerInfo {
+    opacity: 1;
+  }
+}

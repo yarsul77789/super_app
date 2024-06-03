@@ -41,8 +41,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <TopNavBar />
-      <RouterProvider router={router} />
+      <div style={{ backgroundColor: 'black', minHeight: '100vh' }}>
+        <TopNavBar />
+        <RouterProvider router={router} />
+      </div>
     </ThemeProvider>
   </React.StrictMode>
 );

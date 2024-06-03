@@ -25,6 +25,9 @@ dependencies:
   '@types/react-router-dom':
     specifier: ^5.3.3
     version: 5.3.3
+  axios:
+    specifier: ^1.7.2
+    version: 1.7.2
   bootstrap:
     specifier: ^5.3.3
     version: 5.3.3(@popperjs/core@2.11.8)
@@ -42,7 +45,10 @@ dependencies:
     version: 6.23.1(react-dom@18.3.1)(react@18.3.1)
   react-scripts:
     specifier: 5.0.1
-    version: 5.0.1(@babel/plugin-syntax-flow@7.24.6)(@babel/plugin-transform-react-jsx@7.24.6)(eslint@8.57.0)(react@18.3.1)(typescript@4.9.5)
+    version: 5.0.1(@babel/plugin-syntax-flow@7.24.6)(@babel/plugin-transform-react-jsx@7.24.6)(eslint@8.57.0)(react@18.3.1)(sass@1.77.4)(typescript@4.9.5)
+  sass:
+    specifier: ^1.77.4
+    version: 1.77.4
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
@@ -3385,6 +3391,16 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /axios@1.7.2:
+    resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==}
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -5504,6 +5520,15 @@ packages:
       mime-types: 2.1.35
     dev: false
 
+  /form-data@4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: false
+
   /forwarded@0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
     engines: {node: '>= 0.6'}
@@ -5647,6 +5672,7 @@ packages:
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -5980,6 +6006,10 @@ packages:
 
   /immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+    dev: false
+
+  /immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
     dev: false
 
   /import-fresh@3.3.0:
@@ -8701,6 +8731,10 @@ packages:
       ipaddr.js: 1.9.1
     dev: false
 
+  /proxy-from-env@1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+    dev: false
+
   /psl@1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
     dev: false
@@ -8896,7 +8930,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.6)(@babel/plugin-transform-react-jsx@7.24.6)(eslint@8.57.0)(react@18.3.1)(typescript@4.9.5):
+  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.6)(@babel/plugin-transform-react-jsx@7.24.6)(eslint@8.57.0)(react@18.3.1)(sass@1.77.4)(typescript@4.9.5):
     resolution: {integrity: sha512-8VAmEm/ZAwQzJ+GOMLbBsTdDKOpuZh7RPs0UymvBR2vRk4iZWCskjbFnxqjrzoIvlNNRZ3QJFx6/qDSi6zSnaQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -8946,7 +8980,7 @@ packages:
       react-refresh: 0.11.0
       resolve: 1.22.8
       resolve-url-loader: 4.0.0
-      sass-loader: 12.6.0(webpack@5.91.0)
+      sass-loader: 12.6.0(sass@1.77.4)(webpack@5.91.0)
       semver: 7.6.2
       source-map-loader: 3.0.2(webpack@5.91.0)
       style-loader: 3.3.4(webpack@5.91.0)
@@ -9302,7 +9336,7 @@ packages:
     resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
     dev: false
 
-  /sass-loader@12.6.0(webpack@5.91.0):
+  /sass-loader@12.6.0(sass@1.77.4)(webpack@5.91.0):
     resolution: {integrity: sha512-oLTaH0YCtX4cfnJZxKSLAyglED0naiYfNG1iXfU5w1LNZ+ukoA5DtyDIN5zmKVZwYNJP4KRc5Y3hkWga+7tYfA==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -9323,7 +9357,18 @@ packages:
     dependencies:
       klona: 2.0.6
       neo-async: 2.6.2
+      sass: 1.77.4
       webpack: 5.91.0
+    dev: false
+
+  /sass@1.77.4:
+    resolution: {integrity: sha512-vcF3Ckow6g939GMA4PeU7b2K/9FALXk2KF9J87txdHzXbUF9XRQRwSxcAs/fGaTnJeBFd7UoV22j3lzMLdM0Pw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
     dev: false
 
   /sax@1.2.4:
